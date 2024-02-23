@@ -9,10 +9,10 @@
 /* HEADER */
 .header {
     position: fixed;
-    width: 100%;
+    width: 70%;
     height: 2.25em;
     padding: 10px;
-    background-color: #f2f093;
+    background-color: #fdf9c4;
     display: flex;
     flex-direction: wrap;
     justify-content: space-between;
@@ -24,6 +24,7 @@
 .tituloPagina {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 10px;
 }
 .tituloPagina-h1{
@@ -31,6 +32,7 @@
     font-size: 1em;
 }
 .tituloPagina-img {
+    display: inline-block;
     max-width: 1em;
 }
 /* HEADER > NAV-BAR */
@@ -49,12 +51,14 @@
     color: #fff;
 }
 
+/* BODY */
 .body {
-    background-image: url(https://imag.bonviveur.com/pan-chipa-en-un-cestillo.jpg);
+    /* background-image: url(https://imag.bonviveur.com/pan-chipa-en-un-cestillo.jpg);
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
-    background-attachment: fixed; 
+    background-attachment: fixed;  */
+    background: #f08080;
     display: flex;
     justify-content: center;
 }
@@ -63,18 +67,19 @@
 
 /* MAIN */
 .main {
-    background-color: #f2f093aa;
-    padding-top: 60px;
+    background-color: #fdf9c4;
+    padding-top: 40px;
     margin: 0 30px;
     width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    box-shadow: 0 0 50px 5px black;
+    padding: 60px 10px 0;
 }
 
 /* INICIO */
-
+.inicio {
+    text-align: center;
+    padding: 20px;
+}
 
 
 
@@ -83,13 +88,72 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    height: auto;
+    padding: 10px;
+    border-top: 4px solid #f08080;
 }
+.sectionFlex-h2 {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
 .envio {
-    max-width: 30%;
+    min-width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    padding: 20px;
+    border-right: 4px solid #f08080;
 }
+.envio-form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.envio__form-label {
+    width: 100%; 
+}
+.envio__form-label input{
+    background-color: transparent;
+    width: 100%; 
+}
+.textarea-direccion {
+    background-color: transparent;
+    height: 7.5rem;
+    min-width: 100%;
+    resize: none;
+}
+
+
+
+/* Precio */
+
 .tablaDePrecios {
-    max-width: 70%;
+    max-width: 50%;
+    height: auto;
+    padding: 20px;
 }
+.listaDePrecios {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.precio {
+    height: 8.1em;
+    width: 100%;
+    border: 1px solid black;
+}
+
 
 
 
@@ -100,7 +164,7 @@
 
 /* SOBRE NOSOTROS */
 .sobreNosotros {
-    border: 1px solid black;
+    border-top: 4px solid #f08080;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -117,13 +181,15 @@
     margin-bottom: 5px;
 }
 .sobreNosotros-h3 {
+    text-align: center;
     margin-top: 50px;
 }
 .sobreNosotros-iframe {
     padding: 20px;
-    
-    max-width: 560px;
-    max-height: 315px;
+    width: 560px;
+    height: 315px;
+    max-width: 100%;
+    max-height: auto;
 }
 
 
@@ -131,11 +197,41 @@
 
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .header {
         position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
     }
     .main {
-        padding-top: 0;
+        padding-top: 70px;
     }
-}    
+    .sectionFlex {
+        flex-direction: column;
+    }
+
+    .envio {
+        width: 100%;
+        border: none;
+        border-bottom: 4px solid #f08080;
+        border-top: 4px solid #f08080;
+    }
+    .tablaDePrecios {
+        max-width: 100%;
+    }
+    .precio {
+        width: 100%;
+    }
+    
+}   
+@media screen and (max-width: 500px) {
+    .header {
+        width: 100%;
+    }
+    .main {
+        width: 100%;
+        margin: 0;
+    }
+}

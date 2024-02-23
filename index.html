@@ -6,7 +6,7 @@
     <title>Chipá</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="body">
+<body class="body" id="body">
     <header id="header" class="header">
         <div class="tituloPagina">
             <h1 class="tituloPagina-h1">Chipá del Paraná</h1>
@@ -14,7 +14,7 @@
         </div>
 
         <nav class="nav-bar" id="nav-bar">
-            <a class="nav-link" href="#inicio">Inicio</a>
+            <a class="nav-link" href="#body">Inicio</a>
             <a class="nav-link" href="#envio">Envio</a>
             <a class="nav-link" href="#sobreNosotros">Sobre Nosotros</a>
         </nav>
@@ -27,38 +27,56 @@
         </div>
 
         <section class="sectionFlex">
-        <div class="envio" id="envio">
+            <div class="envio" id="envio">
+                <h2 class="sectionFlex-h2">Detalles de envio</h2>
+                <form class="envio-form" id="form" method="post" action='https://www.freecodecamp.com/email-submit'>
+                    <label class="envio__form-label" for="name">
+                        <h3>Nombre completo</h3>
+                        <input type="name" name="" id="name" placeholder="Carpincho Feliz">
+                    </label>
+                    
+                    <label class="envio__form-label" for="email">
+                        <h3>Email de contacto</h3>
+                        <input type="email" name="email" id="email" placeholder="chipacitosdelparana@gmail.com">
+                    </label>
 
-            <form id="form" method="post" action='https://www.freecodecamp.com/email-submit'>
-                <label for="name">
-                    <h3>Nombre completo</h3>
-                    <input type="name" name="" id="name" placeholder="Carpincho Feliz">
-                </label>
-                
-                <label for="email">
-                    <h3>Email de contacto</h3>
-                    <input type="email" name="email" id="email" placeholder="chipacitosdelparana@gmail.com">
-                </label>
+                    <label class="envio__form-label" for="telefono">
+                        <h3>Número de contacto</h3>
+                        <input type="tel" id="telefono" name="telefono" inputmode="numeric" placeholder="Ejemplo: 123-456-7890" required>
+                    </label>
 
-                <label for="telefono">
-                    <h3>Número de contacto</h3>
-                    <input type="tel" id="telefono" name="telefono" inputmode="numeric" placeholder="Ejemplo: 123-456-7890" required>
-                </label>
+                    <label class="envio__form-label" for="cantidad">
+                        <h3>Cantidad</h3>
+                        <input type="number" name="cantidad" id="cantidad" min="0" max="5000" step="100" placeholder="Gramos">
+                    </label>
 
-                <label for="cantidad">
-                    <h3>Cantidad</h3>
-                    <input type="number" name="cantidad" id="cantidad" min="0" max="5000" step="100" placeholder="Gramos">
-                </label>
+                    <label class="envio__form-label" for="dirección">
+                        <h3>Dirección</h3>
+                        <textarea class="textarea-direccion" name="dirección" id="dirección"></textarea>
+                    </label>
+                    
+                    <input type="submit" name="enviar" id="submit" value="Mandar">
+                </form>
+            </div>
+            
+            <div class="tablaDePrecios">
+                <h2 class="sectionFlex-h2">Ordenes</h2>
+                <section class="listaDePrecios">
+                    <div class="precio">
+                        <h3>Chipa</h3>
+                        <p>chipaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaaaaaaaaaa</p>
+                    </div>
+                    <div class="precio">
+                        <h3>Chipa</h3>
+                        <p>chipaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaaaaaaaaaa</p>
+                    </div>
+                    <div class="precio">
+                        <h3>Chipa</h3>
+                        <p>chipaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaaaaaaaaaa</p>
+                    </div>
+                </section>
 
-                <label for="dirección">
-                    <h3>Dirección</h3>
-                    <textarea name="dirección" id="dirección" cols="30" rows="10"></textarea>
-                </label>
-                
-                <input type="submit" name="enviar" id="submit" value="Mandar">
-            </form>
-        </div>
-        <div class="tablaDePrecios"></div>
+            </div>
         </section>
 
         <div class="sobreNosotros" id="sobreNosotros">
