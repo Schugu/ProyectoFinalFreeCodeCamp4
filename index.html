@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chipá</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header" class="header">
+        <h1>Chipá del Paraná</h1>
+        <img id="header-img" src="https://mystickermania.com/cdn/stickers/animals/capybara-with-butterly-512x512.png" alt="">
+        
+
+        <nav id="nav-bar">
+            <a class="nav-link" href="#inicio">Inicio</a>
+            <a class="nav-link" href="#envio">Envio</a>
+            <a class="nav-link" href="#receta">Receta</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="inicio" id="inicio">
+            <p>inicio</p>
+        </div>
+
+        <div class="envio" id="envio">
+            <form id="form" method="post" action='https://www.freecodecamp.com/email-submit'>
+                <label for="name">
+                    <h3>Nombre completo</h3>
+                    <input type="name" name="" id="name" placeholder="Carpincho Feliz">
+                </label>
+                
+                <label for="email">
+                    <h3>Email de contacto</h3>
+                    <input type="email" name="email" id="email" placeholder="chipacitosdelparana@gmail.com">
+                </label>
+
+                <label for="telefono">
+                    <h3>Número de contacto</h3>
+                    <input type="tel" id="telefono" name="telefono" inputmode="numeric" placeholder="Ejemplo: 123-456-7890" required>
+                </label>
+
+                <label for="cantidad">
+                    <h3>Cantidad</h3>
+                    <input type="number" name="cantidad" id="cantidad" min="0" max="5000" step="100" placeholder="Gramos">
+                </label>
+
+                <label for="dirección">
+                    <h3>Dirección</h3>
+                    <textarea name="dirección" id="dirección" cols="30" rows="10"></textarea>
+                </label>
+                
+                <input type="submit" name="enviar" id="submit" value="Mandar">
+            </form>
+        </div>
+
+        <div class="receta" id="receta">
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/YmB3WlSr_yM?si=tRxie0PJ_2f0hyNf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </main>
+    
+</body>
+</html>
