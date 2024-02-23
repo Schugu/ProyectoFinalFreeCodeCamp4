@@ -6,25 +6,29 @@
     <title>Chipá</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="body">
     <header id="header" class="header">
-        <h1>Chipá del Paraná</h1>
-        <img id="header-img" src="https://mystickermania.com/cdn/stickers/animals/capybara-with-butterly-512x512.png" alt="">
-        
+        <div class="tituloPagina">
+            <h1 class="tituloPagina-h1">Chipá del Paraná</h1>
+            <img class="tituloPagina-img" id="header-img" src="https://mystickermania.com/cdn/stickers/animals/capybara-with-butterly-512x512.png" alt="Carpincho">
+        </div>
 
-        <nav id="nav-bar">
+        <nav class="nav-bar" id="nav-bar">
             <a class="nav-link" href="#inicio">Inicio</a>
             <a class="nav-link" href="#envio">Envio</a>
-            <a class="nav-link" href="#receta">Receta</a>
+            <a class="nav-link" href="#sobreNosotros">Sobre Nosotros</a>
         </nav>
     </header>
 
     <main class="main">
         <div class="inicio" id="inicio">
-            <p>inicio</p>
+            <h2 class="inicio-h2">¡Bienvenidos a Chipá del Paraná!</h2>
+            <p class="inicio-p">Explora y compra los mejores chipás artesanales desde la comodidad de tu hogar. ¡Disfruta de la auténtica experiencia del Litoral argentino en cada bocado!</p>
         </div>
 
+        <section class="sectionFlex">
         <div class="envio" id="envio">
+
             <form id="form" method="post" action='https://www.freecodecamp.com/email-submit'>
                 <label for="name">
                     <h3>Nombre completo</h3>
@@ -54,9 +58,28 @@
                 <input type="submit" name="enviar" id="submit" value="Mandar">
             </form>
         </div>
+        <div class="tablaDePrecios"></div>
+        </section>
 
-        <div class="receta" id="receta">
-        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/YmB3WlSr_yM?si=tRxie0PJ_2f0hyNf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="sobreNosotros" id="sobreNosotros">
+            <h2 class="sobreNosotros-h2">Sobre Nosotros</h2>
+            <p class="sobreNosotros-p">En Chipá del Paraná te invitamos a descubrir los auténticos sabores del Litoral argentino a través de nuestros deliciosos chipás. Somos más que un simple emprendimiento, somos una ventana a la rica cultura culinaria de nuestra región, donde cada bocado es un viaje al corazón del Paraná.
+            </p>
+            
+            <p class="sobreNosotros-p">Nuestros chipás, preparados con esmero siguiendo recetas caseras transmitidas de generación en generación, son el complemento perfecto para cualquier momento del día. Ya sea disfrutando de un refrescante tereré bajo la sombra de un árbol, compartiendo un mate con amigos en una tarde de mateada o acompañando el tradicional mate cocido en el desayuno, en Chipá del Paraná tenemos el chipá ideal para cada ocasión.
+            </p>
+            
+            <p class="sobreNosotros-p">Nos enorgullece ofrecerte una experiencia gastronómica auténtica, donde cada chipá es una expresión de nuestro amor por la buena comida y el legado cultural de nuestra tierra. Con ingredientes frescos y de la mejor calidad, elaboramos nuestros chipás con el mismo cuidado y dedicación que se ha transmitido de generación en generación en las familias del Litoral argentino.
+            </p>
+            
+            <p class="sobreNosotros-p">Ven a Chipá del Paraná y déjate llevar por los aromas y sabores que hacen de nuestra región un lugar único en el mundo. Desde el amanecer hasta el anochecer, nuestros chipás están listos para acompañarte en todos tus momentos especiales, llevando contigo un pedacito del Paraná en cada bocado.
+            </p>
+            
+            <p class="sobreNosotros-p">¡Te esperamos en Chipá del Paraná para que juntos disfrutemos de la auténtica experiencia chipera del Litoral argentino!
+            </p>
+            
+            <h3 class="sobreNosotros-h3">Te dejamos un video de como hacemos nuestros exquisitos chipás.</h3>
+            <iframe class="sobreNosotros-iframe" id="video" width="560" height="315" src="https://www.youtube.com/embed/YmB3WlSr_yM?si=tRxie0PJ_2f0hyNf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </main>
     
