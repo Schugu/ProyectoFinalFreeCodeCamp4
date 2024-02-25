@@ -4,21 +4,31 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
+
+:root {
+    --background-color: #ffd792;
+    --background-color-contrast: #4d4d4d;
+    --color-letras: #efefef;
+}
+
+
+
 
 /* HEADER */
 .header {
     position: fixed;
-    width: 70%;
+    width: 100%;
     height: 2.25em;
     padding: 10px;
-    background-color: #fdf9c4;
+    background-color: var(--background-color);
     display: flex;
     flex-direction: wrap;
     justify-content: space-between;
     text-align: center;
     align-items: center;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid var(--background-color-contrast);
 }
 /* HEADER > TITULO DE LA PÁGINA */
 .tituloPagina {
@@ -53,12 +63,7 @@
 
 /* BODY */
 .body {
-    /* background-image: url(https://imag.bonviveur.com/pan-chipa-en-un-cestillo.jpg);
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: center;
-    background-attachment: fixed;  */
-    background: #f08080;
+    background: var(--background-color-contrast);
     display: flex;
     justify-content: center;
 }
@@ -67,19 +72,38 @@
 
 /* MAIN */
 .main {
-    background-color: #fdf9c4;
-    padding-top: 40px;
+    background-color: var(--background-color);
     margin: 0 30px;
     width: 70%;
     box-shadow: 0 0 50px 5px black;
-    padding: 60px 10px 0;
+    padding: 35px 10px calc(300px * 9);  /* PONGO ESTA MEDIDA POR QUE EN FREE CODE CAMP SE BUGUEA EL MAIN */
 }
 
 /* INICIO */
 .inicio {
     text-align: center;
-    padding: 20px;
+    background-image: url(https://i.blogs.es/bd9987/chipa_casero/450_1000.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 -10px -10px;
+    border-bottom: 5px solid var(--background-color-contrast);
+} 
+.inicio-h2, .inicio-p { 
+    background-color: #ffffffaa;
+    padding: 0 20px;
 }
+.inicio-h2 {
+    padding: 20px 0 10px 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+.inicio-p { 
+    padding: 10px 10px 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 
 
 
@@ -87,15 +111,16 @@
 .sectionFlex {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    justify-content: center;
+    max-width: 100%;
     height: auto;
     padding: 10px;
-    border-top: 4px solid #f08080;
+    /* border-top: 4px solid var(--background-color-contrast); */
 }
 .sectionFlex-h2 {
     text-align: center;
-    padding: 10px;
     margin-bottom: 10px;
+    border-bottom: 2px solid var(--background-color-contrast);
 }
 
 
@@ -111,47 +136,132 @@
     justify-content: space-between;
     text-align: left;
     padding: 20px;
-    border-right: 4px solid #f08080;
+    border-right: 4px solid var(--background-color-contrast);
 }
 .envio-form{
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 10px;
 }
 .envio__form-label {
     width: 100%; 
 }
-.envio__form-label input{
+.envio__form-label h3{
+    padding-bottom: 5px;
+}
+.envio__form-label input, .envio__form-select select{
     background-color: transparent;
-    width: 100%; 
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; 
+    outline: none;
+    border: none;
+    height: 2.2em;
+    padding-left: 10px;
+    border-top: 5px solid var(--background-color-contrast);
+}
+.envio__form-select select{
+    color: #ffffffaa;
+}
+.envio__form-select select option {
+    background-color: var(--background-color);
+    color: var(--background-color-contrast);
+}
+
+.envio-form ::placeholder {
+    color: #ffffffaa;
+    text-indent: 10px;
+    font-size: 1.2em;
+    align-items: center;
 }
 .textarea-direccion {
     background-color: transparent;
-    height: 7.5rem;
+    height: 7rem;
     min-width: 100%;
     resize: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    padding: 10px;
+    border: none;
+    border-top: 5px solid var(--background-color-contrast);
+    outline: none;
 }
+.envio__form-submit {
+    height: 2em;
+    background-color: var(--background-color-contrast);
+    color: var(--color-letras);
+    border: none;
+    cursor: grab;
+    border-top: 4px solid var(--color-letras);
+}
+.envio__form-submit:hover {
+    background-color: #b0b0b0;
+    border-top: 4px solid #cbcbcb;
+    color: var(--background-color-contrast);
+    font-weight: bold;
+}
+.envio__form-submit:active {
+    background-color: #000000;
+    border-top: 4px solid #353535;
+}
+
+
+
 
 
 
 /* Precio */
-
 .tablaDePrecios {
-    max-width: 50%;
-    height: auto;
+    min-width: 50%; 
+    height: auto; 
     padding: 20px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
 }
 .listaDePrecios {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
+    /* padding: 20px; */
+    margin-bottom: -20px;
 }
-
 .precio {
-    height: 8.1em;
-    width: 100%;
-    border: 1px solid black;
+    height: 8.1em; 
+    width: 100%; 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid var(--background-color-contrast);
+    padding-bottom: 10px;
+}
+.precio__img {
+    max-width: 35%; 
+    height: 6em; 
+    object-fit: cover; 
+    object-position: center;
+    border-radius: 100%;
+    border: 5px double var(--background-color-contrast);
+}
+.precio__info {
+    max-width: 65%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+.precio__info-h3 {
+    width: 80%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 4px solid var(--background-color-contrast)
+}
+.precio__info-p{
+    padding: 10px;
+    text-align: center;
 }
 
 
@@ -164,7 +274,7 @@
 
 /* SOBRE NOSOTROS */
 .sobreNosotros {
-    border-top: 4px solid #f08080;
+    border-top: 4px solid var(--background-color-contrast);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -176,6 +286,7 @@
     padding: 20px 0 30px 0;
 }
 .sobreNosotros-p {
+    text-align: left;
     text-indent: 20px;
     padding: 0 20px;
     margin-bottom: 5px;
@@ -197,6 +308,13 @@
 
 
 /* MEDIA QUERIES */
+@media screen and (min-width: 800px) {
+    .header {
+        position: fixed;
+        width: 70%;
+    }
+
+}
 @media screen and (max-width: 800px) {
     .header {
         position: absolute;
@@ -211,12 +329,10 @@
     .sectionFlex {
         flex-direction: column;
     }
-
     .envio {
         width: 100%;
         border: none;
-        border-bottom: 4px solid #f08080;
-        border-top: 4px solid #f08080;
+        border-bottom: 4px solid var(--background-color-contrast);
     }
     .tablaDePrecios {
         max-width: 100%;

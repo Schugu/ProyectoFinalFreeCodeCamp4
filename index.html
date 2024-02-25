@@ -40,9 +40,14 @@
                         <input type="email" name="email" id="email" placeholder="chipacitosdelparana@gmail.com">
                     </label>
 
-                    <label class="envio__form-label" for="telefono">
-                        <h3>Número de contacto</h3>
-                        <input type="tel" id="telefono" name="telefono" inputmode="numeric" placeholder="Ejemplo: 123-456-7890" required>
+                    <label class="envio__form-select" for="orden">
+                        <h3>¿Que producto desea?</h3>
+                        <select name="orden" id="orden">
+                            <option value="0">Elija una</option>
+                            <option value="1">Chipacitos</option>
+                            <option value="2">Chipá Rosca</option>
+                            <option value="3">Chipá Mboca</option>
+                        </select>
                     </label>
 
                     <label class="envio__form-label" for="cantidad">
@@ -52,28 +57,38 @@
 
                     <label class="envio__form-label" for="dirección">
                         <h3>Dirección</h3>
-                        <textarea class="textarea-direccion" name="dirección" id="dirección"></textarea>
+                        <textarea class="textarea-direccion" name="dirección" id="dirección" placeholder="Juan Bautista Alberdi 2024"></textarea>
                     </label>
                     
-                    <input type="submit" name="enviar" id="submit" value="Mandar">
+                    <input class="envio__form-submit" type="submit" name="enviar" id="submit" value="Mandar">
                 </form>
             </div>
             
             <div class="tablaDePrecios">
-                <h2 class="sectionFlex-h2">Ordenes</h2>
+                <h2 class="sectionFlex-h2">Órdenes</h2>
                 <section class="listaDePrecios">
                     <div class="precio">
-                        <h3>Chipa</h3>
-                        <p>chipaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaaaaaaaaaa</p>
+                        <img class="precio__img" src="https://www.clarin.com/2023/01/17/obDxANA6S_1256x620__2.jpg" alt="Chipacitos">
+                        <article class="precio__info">
+                            <h3 class="precio__info-h3">Chipásitos</h3>
+                            <p class="precio__info-p">Se vende de a 100 gramos</p>
+                        </article>
                     </div>
                     <div class="precio">
-                        <h3>Chipa</h3>
-                        <p>chipaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaaaaaaaaaa</p>
+                        <img class="precio__img" src="https://i.pinimg.com/originals/81/02/f2/8102f25a2075c04ef1894362020db46e.jpg" alt="Chipacitos">
+                        <article class="precio__info">
+                            <h3 class="precio__info-h3">Chipá Rosca</h3>
+                            <p class="precio__info-p">Se vende 1 x 200 o 3 x 300</p>
+                        </article>
                     </div>
                     <div class="precio">
-                        <h3>Chipa</h3>
-                        <p>chipaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaaaaaaaaaa</p>
+                        <img class="precio__img" src="https://www.recetas-argentinas.com/base/stock/Recipe/292-image/292-image_web.jpg.webp" alt="Chipacitos">
+                        <article class="precio__info">
+                            <h3 class="precio__info-h3">Chipá Mboca</h3>
+                            <p class="precio__info-p"> Se vende 1 x 400 o 3 x 1000</p>
+                        </article>
                     </div>
+
                 </section>
 
             </div>
@@ -81,19 +96,24 @@
 
         <div class="sobreNosotros" id="sobreNosotros">
             <h2 class="sobreNosotros-h2">Sobre Nosotros</h2>
-            <p class="sobreNosotros-p">En Chipá del Paraná te invitamos a descubrir los auténticos sabores del Litoral argentino a través de nuestros deliciosos chipás. Somos más que un simple emprendimiento, somos una ventana a la rica cultura culinaria de nuestra región, donde cada bocado es un viaje al corazón del Paraná.
+            <p class="sobreNosotros-p">
+                En Chipá del Paraná te invitamos a descubrir los auténticos sabores del Litoral argentino a través de nuestros deliciosos chipás. Somos más que un simple emprendimiento, somos una ventana a la rica cultura culinaria de nuestra región, donde cada bocado es un viaje al corazón del Paraná.
             </p>
             
-            <p class="sobreNosotros-p">Nuestros chipás, preparados con esmero siguiendo recetas caseras transmitidas de generación en generación, son el complemento perfecto para cualquier momento del día. Ya sea disfrutando de un refrescante tereré bajo la sombra de un árbol, compartiendo un mate con amigos en una tarde de mateada o acompañando el tradicional mate cocido en el desayuno, en Chipá del Paraná tenemos el chipá ideal para cada ocasión.
+            <p class="sobreNosotros-p">
+                Nuestros chipás, preparados con esmero siguiendo recetas caseras transmitidas de generación en generación, son el complemento perfecto para cualquier momento del día. Ya sea disfrutando de un refrescante tereré bajo la sombra de un árbol, compartiendo un mate con amigos en una tarde de mateada o acompañando el tradicional mate cocido en el desayuno, en Chipá del Paraná tenemos el chipá ideal para cada ocasión.
             </p>
             
-            <p class="sobreNosotros-p">Nos enorgullece ofrecerte una experiencia gastronómica auténtica, donde cada chipá es una expresión de nuestro amor por la buena comida y el legado cultural de nuestra tierra. Con ingredientes frescos y de la mejor calidad, elaboramos nuestros chipás con el mismo cuidado y dedicación que se ha transmitido de generación en generación en las familias del Litoral argentino.
+            <p class="sobreNosotros-p">
+                Nos enorgullece ofrecerte una experiencia gastronómica auténtica, donde cada chipá es una expresión de nuestro amor por la buena comida y el legado cultural de nuestra tierra. Con ingredientes frescos y de la mejor calidad, elaboramos nuestros chipás con el mismo cuidado y dedicación que se ha transmitido de generación en generación en las familias del Litoral argentino.
             </p>
             
-            <p class="sobreNosotros-p">Ven a Chipá del Paraná y déjate llevar por los aromas y sabores que hacen de nuestra región un lugar único en el mundo. Desde el amanecer hasta el anochecer, nuestros chipás están listos para acompañarte en todos tus momentos especiales, llevando contigo un pedacito del Paraná en cada bocado.
+            <p class="sobreNosotros-p">
+                Ven a Chipá del Paraná y déjate llevar por los aromas y sabores que hacen de nuestra región un lugar único en el mundo. Desde el amanecer hasta el anochecer, nuestros chipás están listos para acompañarte en todos tus momentos especiales, llevando contigo un pedacito del Paraná en cada bocado.
             </p>
             
-            <p class="sobreNosotros-p">¡Te esperamos en Chipá del Paraná para que juntos disfrutemos de la auténtica experiencia chipera del Litoral argentino!
+            <p class="sobreNosotros-p">
+                Te esperamos en Chipá del Paraná para que juntos disfrutemos de la auténtica experiencia chipera del Litoral argentino!
             </p>
             
             <h3 class="sobreNosotros-h3">Te dejamos un video de como hacemos nuestros exquisitos chipás.</h3>
