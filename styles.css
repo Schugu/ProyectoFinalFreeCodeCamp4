@@ -72,7 +72,7 @@
     margin: 0 30px;
     width: 70%;
     box-shadow: 0 0 50px 5px black;
-    padding: 35px 10px calc(300px * 9);  /* PONGO ESTA MEDIDA POR QUE EN FREE CODE CAMP SE BUGUEA EL MAIN */
+    padding: 35px 10px;  
 }
 
 /* INICIO */
@@ -280,14 +280,6 @@
     height: 315px;
     max-width: 100%;
     max-height: auto;
-}
-
-/* BUG FREECODECAMP */
-.bugFreeCodeCamp {
-    margin-top: 5em;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.5em;
 }
 
 /* MEDIA QUERIES */
